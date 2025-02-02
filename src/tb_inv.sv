@@ -1,26 +1,26 @@
-// tb.sv
-module tb;
-  // テスト用信号の宣言
+module tb();
+
+  // test signals
   logic [3:0] a;
   logic [3:0] y;
 
-  // DUT (Device Under Test) のインスタンス化
+  // instanciate DUT (Device Under Test)
   inv dut (
     .a(a),
     .y(y)
   );
 
-  // シミュレーション開始時の初期ブロック
+  // start simulation
   initial begin
     $display("* Test started.");
-    // テストケース1: a = 0 の場合、y は 1 になるはず
+    // case 1: a=0 -> y=0xF
     a = 0;
-    #5;  // 少し待つ（伝搬遅延を考慮）
-    // 4bit hex, 0xF
+    #5;  // wait (propagation delay considered)
+    // 4'hF: 4bit hex, 0xF
     assert(y == 4'hF)
       else $fatal(1, "Assertion failed: for a = 0, expected y = 0xF, but got y = %0d", y);
 
-    // テストケース2: a = 0xA の場合、y は 5 になるはず
+    // case 2: a=0xA -> y=5
     // 4bit hex, 0XA
     a = 4'hA;
     #5;
