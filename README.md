@@ -2,9 +2,9 @@
 
 ## About
 
-* A quick `inv` example in System Verilog for GoWin IDE (Tang Nano)
+* A quick `inv` (inverter) example in System Verilog for GoWin IDE (Tang Nano)
 * With a test bench example for Verilator
-* With a simulation example for Verilator & Gtkwave
+* With a wave output example for Verilator & Gtkwave
 
 
 ## How to run
