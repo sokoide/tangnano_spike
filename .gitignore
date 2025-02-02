@@ -4,3 +4,4 @@ impl/*
 !impl/spike_process_config.json
 obj_dir
 spike.gprj.user
+waveform.vcd

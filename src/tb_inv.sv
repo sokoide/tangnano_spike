@@ -1,4 +1,4 @@
-module tb();
+module tb_inv();
 
   // test signals
   logic [3:0] a;
