@@ -36,6 +36,7 @@ int main(int argc, char** argv) {
     }
 
     // Close
+    top->final();
     tfp->close();
     delete top;
 
